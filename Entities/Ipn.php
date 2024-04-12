@@ -173,4 +173,14 @@ class Ipn extends BaseModel
         $structure['filter'] = ['txn_id', 'mc_gross', 'mc_currency', 'payment_status', 'payment_date'];
         return $structure;
     }
+
+    /**
+     * Define rights for this model.
+     *
+     * @return array
+     */
+    public function rights(): array
+    {
+
+    }
 }
