@@ -14,19 +14,6 @@ class Paypal extends BaseModel
      */
     protected $fillable = [ 'payment_id', 'transaction_code', 'status', 'amount', 'currency', 'item_number'];
 
-    /**
-     * The fields that are to be render when performing relationship queries.
-     *
-     * @var array<string>
-     */
-    public $rec_names = ['transaction_code'];
-
-    /**
-     * List of tables names that are need in this model during migration.
-     *
-     * @var array<string>
-     */
-    public array $migrationDependancy = [];
 
     /**
      * The table associated with the model.
@@ -59,30 +46,6 @@ class Paypal extends BaseModel
         $this->fields->string('item_number')->nullable()->html('text');
     }
 
-    /**
-     * List of structure for this model.
-     */
-    public function structure($structure): array
-    {
-        $structure['table'] = ['payment_id', 'transaction_code', 'status', 'amount', 'currency', 'item_number'];
-        $structure['filter'] = ['transaction_code'];
 
-        return $structure;
-    }
-
-    /**
-     * Define rights for this model.
-     *
-     * @return array
-     */
-    public function rights(): array
-    {
-        $rights = parent::rights();
-
-        $rights['staff'] = ['view' => true];
-        $rights['registered'] = ['view' => true];
-        $rights['guest'] = [];
-
-        return $rights;
-    }
+  
 }
