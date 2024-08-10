@@ -1,8 +1,8 @@
 <?php
 
-namespace Modules\Paypal\Entities;
+namespace Modules\Paypal\Models;
 
-use Modules\Base\Entities\BaseModel;
+use Modules\Base\Models\BaseModel;
 
 class Ipn extends BaseModel
 {

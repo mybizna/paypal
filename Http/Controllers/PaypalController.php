@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Redirect; // Replace with your PaymentProcessor c
 use Illuminate\Support\Facades\Response; // Replace with your Paypal class
 use Illuminate\Support\Facades\View; // Replace with your DBManager class
 use Modules\Core\Classes\DBManager;
-use Modules\Paypal\Entities\Paypal;
+use Modules\Paypal\Models\Paypal;
 
 class PaypalController extends Controller
 {

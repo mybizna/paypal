@@ -1,13 +1,10 @@
-<?php 
+<?php
 
 namespace Modules\Paypal\Classes;
 
-use Modules\Payment\Entities\Transaction;
-use Modules\Payment\Entities\Payment;
-use Modules\Paypal\Classes\PaypalPayment;
-use Modules\Payment\Classes\PaymentProcessor;
 use Illuminate\Http\Request;
-use Carbon\Carbon;
+use Modules\Payment\Classes\PaymentProcessor;
+use Modules\Payment\Models\Payment;
 
 class Paypal extends Controller
 {

@@ -1,9 +1,8 @@
 <?php
 
-namespace Modules\Paypal\Entities;
+namespace Modules\Paypal\Models;
 
-use Illuminate\Database\Schema\Blueprint;
-use Modules\Base\Entities\BaseModel;
+use Modules\Base\Models\BaseModel;
 
 class Paypal extends BaseModel
 {
@@ -12,8 +11,7 @@ class Paypal extends BaseModel
      *
      * @var array<string>
      */
-    protected $fillable = [ 'payment_id', 'transaction_code', 'status', 'amount', 'currency', 'item_number'];
-
+    protected $fillable = ['payment_id', 'transaction_code', 'status', 'amount', 'currency', 'item_number'];
 
     /**
      * The table associated with the model.
@@ -22,8 +20,4 @@ class Paypal extends BaseModel
      */
     protected $table = "paypal";
 
- 
-
-
-  
 }
