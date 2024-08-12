@@ -26,7 +26,14 @@
   },
   "autoload": {
     "psr-4": {
-      "Modules\\Paypal\\": ""
+      "Modules\\Paypal\\": "app/",
+      "Modules\\Paypal\\Database\\Factories\\": "database/factories/",
+      "Modules\\Paypal\\Database\\Seeders\\": "database/seeders/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Modules\\Paypal\\Tests\\": "tests/"
     }
   }
 }
