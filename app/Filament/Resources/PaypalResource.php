@@ -2,20 +2,22 @@
 
 namespace Modules\Paypal\Filament\Resources;
 
-use Modules\Paypal\Filament\Resources\PaypalResource\Pages;
-use Modules\Paypal\Filament\Resources\PaypalResource\RelationManagers;
-use Modules\Paypal\Models\Paypal;
-use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Modules\Paypal\Filament\Resources\PaypalResource\Pages;
+use Modules\Paypal\Models\Paypal;
 
 class PaypalResource extends Resource
 {
     protected static ?string $model = Paypal::class;
+
+    protected static ?string $slug = 'paypal/paypal';
+
+    protected static ?string $navigationGroup = 'Gateway';
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 

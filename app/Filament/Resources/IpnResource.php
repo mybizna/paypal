@@ -2,9 +2,6 @@
 
 namespace Modules\Paypal\Filament\Resources;
 
-use Modules\Paypal\Filament\Resources\IpnResource\Pages;
-use Modules\Paypal\Filament\Resources\IpnResource\RelationManagers;
-use Modules\Paypal\Models\Ipn;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -12,10 +9,16 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Modules\Paypal\Filament\Resources\IpnResource\Pages;
+use Modules\Paypal\Models\Ipn;
 
 class IpnResource extends Resource
 {
     protected static ?string $model = Ipn::class;
+
+    protected static ?string $slug = 'paypal/ipn';
+
+    protected static ?string $navigationGroup = 'Gateway';
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
