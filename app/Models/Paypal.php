@@ -19,7 +19,7 @@ class Paypal extends BaseModel
      *
      * @var string
      */
-    protected $table = "paypal";
+    protected $table = "paypal_paypal";
 
     /**
      * Add relationship to Payment
