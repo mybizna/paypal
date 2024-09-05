@@ -2,6 +2,7 @@
 
 namespace Modules\Paypal\Models;
 
+use Modules\Account\Models\Payment;
 use Modules\Base\Models\BaseModel;
 
 class Paypal extends BaseModel
@@ -19,5 +20,14 @@ class Paypal extends BaseModel
      * @var string
      */
     protected $table = "paypal";
+
+    /**
+     * Add relationship to Payment
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function payment()
+    {
+        return $this->belongsTo(Payment::class);
+    }
 
 }
