@@ -3,15 +3,12 @@
 namespace Modules\Paypal\Filament\Resources;
 
 use Filament\Forms\Form;
-use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
-use Modules\Paypal\Filament\Resources\PaypalResource\Pages;
+use Modules\Base\Filament\Resources\BaseResource;
 use Modules\Paypal\Models\Paypal;
 
-class PaypalResource extends Resource
+class PaypalResource extends BaseResource
 {
     protected static ?string $model = Paypal::class;
 
@@ -50,27 +47,4 @@ class PaypalResource extends Resource
             ]);
     }
 
-    public static function getRelations(): array
-    {
-        return [
-            //
-        ];
-    }
-
-    public static function getPages(): array
-    {
-        return [
-            'index' => Pages\ListPaypals::route('/'),
-            'create' => Pages\CreatePaypal::route('/create'),
-            'edit' => Pages\EditPaypal::route('/{record}/edit'),
-        ];
-    }
-
-    public static function getEloquentQuery(): Builder
-    {
-        return parent::getEloquentQuery()
-            ->withoutGlobalScopes([
-                SoftDeletingScope::class,
-            ]);
-    }
 }
