@@ -6,6 +6,7 @@ use Filament\Forms\Form;
 use Filament\Tables;
 use Filament\Tables\Table;
 use Modules\Base\Filament\Resources\BaseResource;
+use Modules\Base\Filament\Resources\Pages;
 use Modules\Paypal\Models\Paypal;
 
 class PaypalResource extends BaseResource
@@ -47,4 +48,15 @@ class PaypalResource extends BaseResource
             ]);
     }
 
+    public static function getPages(): array
+    {
+
+        Pages\ListBase::setResource(static::class);
+
+        return [
+            'index' => Pages\ListBase::route('/'),
+            'create' => Pages\CreateBase::route('/create'),
+            'edit' => Pages\EditBase::route('/{record}/edit'),
+        ];
+    }
 }
