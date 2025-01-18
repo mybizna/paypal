@@ -35,7 +35,6 @@ class Paypal extends BaseModel
 
     public function migration(Blueprint $table): void
     {
-        $table->id();
 
         $table->string('name');
         $table->text('description');

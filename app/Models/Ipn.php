@@ -25,7 +25,6 @@ class Ipn extends BaseModel
 
     public function migration(Blueprint $table): void
     {
-        $table->id();
 
         $table->string('business', 127);
         $table->string('charset');
