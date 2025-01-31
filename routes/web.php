@@ -1,6 +1,8 @@
 <?php
 
-use App\Http\Controllers\PaymentController;
+use Illuminate\Support\Facades\Route;
+
+use Modules\Account\Http\Controllers\PaymentController;
 
 Route::get('/payment', [PaymentController::class, 'index'])->name('payment.index');
 Route::post('/payment/paypal/return', [PaymentController::class, 'paypalReturn'])->name('payment.paypal.return');

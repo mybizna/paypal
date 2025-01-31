@@ -8,8 +8,9 @@ use Illuminate\Support\Facades\Response; // Replace with your Paypal class
 use Illuminate\Support\Facades\View; // Replace with your DBManager class
 use Modules\Core\Classes\DBManager;
 use Modules\Paypal\Models\Paypal;
+use Modules\Base\Http\Controllers\BaseController;
 
-class PaypalController extends Controller
+class PaypalController extends BaseController
 {
     public function index()
     {

@@ -5,8 +5,9 @@ namespace Modules\Paypal\Classes;
 use Illuminate\Http\Request;
 use Modules\Payment\Classes\PaymentProcessor;
 use Modules\Payment\Models\Payment;
+use Modules\Base\Http\Controllers\BaseController;
 
-class Paypal extends Controller
+class Paypal extends BaseController
 {
     public function paymentPaypalReturn(Request $request)
     {
